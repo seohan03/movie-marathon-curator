@@ -35,18 +35,20 @@ I made sure that the same movie wouldn't be recommended multiple time and consid
 ## Semantic Search vs. Keyword Search
 ### Example 1: Nostalgia and returning to the past
 
-The user asks for a movie about someone wanting to experience the happiness during their youth again. 
-
 Exact text query: "A reflective story about someone yearning to relive the happiness of their younger days."
 
-Chandrolsavam describes a man returning to his hometown and trying to recapture moments from his past. The reported keyword overlap was only the generic word "story." (Ranked #4 in semantic search)
+Movie Retrieved: Chandrolsavam (Ranked #4 in semantic search)
 
-The database recognized a thematic similarity even though the important words were different. 
+The user asks for a movie about someone wanting to experience the happiness of their youth again. Chandrolsavam describes a man returning to his hometown and trying to recapture moments from his past.
+
+Why keyword search would fail: The only reported keyword overlap was the generic word "story." A keyword search that would rely on important words like "yearning," "relive," and "younger" would miss the connection because the movie summary instead describes concepts such as nostalgia and revisiting the past.
 
 ### Example 2: Friendship between people with different personalities
 
 Exact text query: "Two adolescents with contrasting temperaments build a lasting bond amid social exclusion."
 
-Mina Tannenbaum follows two girls who feel like outsiders and become friends despite having little in common. (Ranked #2 in semantic search and no keyword search comparison overlap)
+Movie Retrieved: Mina Tannenbaum (Ranked #2 in semantic search and no keyword search comparison overlap)
 
-A traditional exact word search wouldn't recognize the different expressions are related, but ChromaDB was able to find the movie based on its meaning.
+Follows two girls who feel like outsiders and become friends despite having little in common. 
+
+Why keyword search would fail: The movie had no matching keywords in the tested comparison, giving it a keyword score of zero. A traditional keyword search would miss the connection between "contrasting temperaments" and having different personalities, or "social exclusion" and feeling like outsiders. However, ChromaDB was able to recognize these similar meanings and retrieve the movie.
