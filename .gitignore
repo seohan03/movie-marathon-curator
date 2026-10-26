@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Movie Marathon Curator
+
+# Persistent ChromaDB database
+chroma_db/
+
+# Downloaded movie datasets
+data/
